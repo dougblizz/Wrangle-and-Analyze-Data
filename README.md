@@ -1,2 +1,37 @@
-# Wrangle-and-Analyze-Data
-In this project, I'll be using Tweepy to query Twitter's API for data included in the WeRateDogs Twitter archive. This data will include retweet count and favorite count. Before I can run my API querying code, I need to set up my own Twitter application. Once I have this set up, I will develop some code to create an API object that I'll use to gather Twitter data. After querying each tweet ID, I will write its JSON data to a tweet_json.txt file with each tweet's JSON data on its own line. I will then read this file, line by line, to create a pandas DataFrame that I will assess and clean.
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <div align="center"><h1>Wrrangle and Analyze Data</h1></div>
+  <div align="center">
+    <a>
+        <img src="./media/pandas.png" alt="Logo" width="150" height="100">
+        <img src="./media/matplotlib.png" alt="Logo" width="150" height="100">
+        <img src="./media/seaborn.png" alt="Logo" width="150" height="100">
+    </a>
+  </div>
+</p>
+</br>
+
+## Table of Contents
+
+* [About this project](#about-this-projectd)
+  * [Dataset](#dataset)
+* [Libreries](#libreries)
+
+## About this project
+
+This project for gathering, assessing, cleaning, analyzing, and visualizing data
+
+### Dataset
+
+-   clean_sample.csv
+-   tweet_json.txt
+
+## Libraries
+
+-   pandas
+-   matplotlib
+-   seaborn
+-   tweepy
+
+
