@@ -1,4 +1,8 @@
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+"""
+@author: dougblizz
+"""
 
 import requests
 import tweepy
@@ -38,7 +42,7 @@ def get_tweets_data(df):
         fails_dict = {}
         start = timer()
         # Save each tweet's returned JSON as a new line in a .txt file
-        with open('tweet_json.txt', 'w') as outfile:
+        with open('../data/tweet_json.txt', 'w') as outfile:
             # This loop will likely take 20-30 minutes to run because of Twitter's rate limit
             for tweet_id in tweet_ids:
                 count += 1
@@ -52,6 +56,8 @@ def get_tweets_data(df):
                     print("Fail")
                     fails_dict[tweet_id] = e
                     pass
+                if count == 3:
+                    break
         end = timer()
         print(end - start)
         print(fails_dict)
@@ -62,7 +68,7 @@ def parse_api_result_to_dataframe():
     lines = []
     df = pd.DataFrame()
     keys_to_remove = ['user', 'entities', 'extended_entities',]
-    with open('tweet_json.txt') as json_file:
+    with open('../data/tweet_json.txt') as json_file:
         lines = json_file.readlines()
         json_file.close()
         

@@ -2,3 +2,7 @@ pandas
 matplotlib
 seaborn
 tweepy
+re
+timeit
+io
+json

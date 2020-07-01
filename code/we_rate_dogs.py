@@ -1,4 +1,8 @@
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+"""
+@author: dougblizz
+"""
 
 import pandas as pd
 import funct 
@@ -8,15 +12,14 @@ import re
 
 #Import data
 # ================================================================================================================
-df_clean = pd.read_csv("clean_sample.csv")
 
-df_enhanced = pd.read_csv("twitter-archive-enhanced.csv")
+df_enhanced = pd.read_csv("../data/twitter-archive-enhanced.csv")
 
 url = "https://d17h27t6h515a5.cloudfront.net/topher/2017/August/599fd2ad_image-predictions/image-predictions.tsv"
 
 df_predictions = funct.create_df_images_prediction(url)
 
-if not os.path.isfile('tweet_json.txt'):
+if not os.path.isfile('../data/tweet_json.txt'):
     print("file tweet_json.txt not exist, please send keys")
     funct.get_tweets_data(df_enhanced)
 else:
@@ -247,7 +250,7 @@ funct.top_plot(twitter_archive_master, 'name', 'ratings', 'Top 20 dogs with high
 
 #Save csv
 # =============================================================================
-twitter_archive_master.to_csv('twitter_archive_master.csv', index = False)
+twitter_archive_master.to_csv('../data/twitter_archive_master.csv', index = False)
 # =============================================================================
 
 
