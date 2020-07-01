@@ -245,6 +245,11 @@ funct.top_plot(twitter_archive_master, 'name', 'retweet_count', 'Top 10 most ret
 funct.top_plot(twitter_archive_master, 'name', 'ratings', 'Top 20 dogs with highest rating', 20)                
 # =============================================================================
 
+#Save csv
+# =============================================================================
+twitter_archive_master.to_csv('twitter_archive_master.csv', index = False)
+# =============================================================================
+
 
 
 
